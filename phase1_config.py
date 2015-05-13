@@ -27,7 +27,7 @@ manifest_jarpath = phase1_lib + "/AXMLPrinter2.jar"
 
 # Transform configuration
 rt_jar = "/usr/lib/jvm/default-java/jre/lib/rt.jar"
-apk_transform_bin = phase1_base + "/cert/transformApk/bin"
+apk_transform_bin = phase1_base + "/didfail_aws/transformApk/bin"
 android_jar = sdk_platforms + "/android-16/android.jar"
 transform_classpath = ":".join([soot_classpath, android_jar, rt_jar, apk_transform_bin])
 transform_jvm_flags = ["-Xmx2048m"]
