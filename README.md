@@ -53,7 +53,7 @@ Very granular configuration of the phase 1 is facilitated by editing `phase1_con
 A virtual machine image was created for running DidFail phase 1. The id of this image is: `ami-b2b6a5da`.  After launching an instance from this image, you can run phase 1 as follows:
 ```
 cd ~/pythonrunner/phase1/didfail_aws
-~/pythonrunner/phase1/didfail_aws$ python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
+python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
 ```
 Some sample APKs are included in `~/apk_samples`.  For large runs, ensure the directory you are writing to has enough space to hold the output.  The root volumes on these VMs often are too small for the task. 
 
