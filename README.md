@@ -34,11 +34,11 @@ outdir
 ```
 The output of this script can be controlled via the `log_level` variable in the configuration, described below.  Summary information about each command executed is outputted by default, in this format.
 ```
-INFO:root:DidFailTaskStatus     APKTransformer  /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SUCCESS 61.2379238605
-INFO:root:DidFailTaskStatus     Dare    /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SKIPPED 0.0
-INFO:root:DidFailTaskStatus     Epicc   /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SKIPPED 0.0
-INFO:root:DidFailTaskStatus     ExtractManifest /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SUCCESS 0.0
-INFO:root:DidFailTaskStatus     FlowDroid       /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    FAILED  81.4125051498
+INFO:root:DidFailTaskStatus     APKTransformer  /home/ubuntu/joansoft.dailybible.apk    SUCCESS 61.2379238605
+INFO:root:DidFailTaskStatus     Dare    /home/ubuntu/joansoft.dailybible.apk    SKIPPED 0.0
+INFO:root:DidFailTaskStatus     Epicc   /home/ubuntu/joansoft.dailybible.apk    SKIPPED 0.0
+INFO:root:DidFailTaskStatus     ExtractManifest /home/ubuntu/joansoft.dailybible.apk    SUCCESS 0.0
+INFO:root:DidFailTaskStatus     FlowDroid       /home/ubuntu/joansoft.dailybible.apk    FAILED  81.4125051498
 ```
 The columns are tab separated.  The schema is: 
 ```
