@@ -57,6 +57,8 @@ python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.ap
 ```
 Some sample APKs are included in `~/apk_samples`.  For large runs, ensure the directory you are writing to has enough space to hold the output.  The root volumes on these VMs often are too small for the task. 
 
+This image contains a clone of this repository, so updating this code does not require updating the image.  You simply must pull the repository on the provisioned instance (located at the path `~pythonrunner/phase1/didfail_aws`).
+
 ## Phase 2
 Phase 2 involves correlating the output from Phase 1 to construct tainted flows between applications.  This repository currently only has code for automating phase 1. 
 
