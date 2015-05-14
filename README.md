@@ -40,6 +40,10 @@ INFO:root:DidFailTaskStatus     Epicc   /home/ubuntu/apk_samples/BOOKS_AND_REFER
 INFO:root:DidFailTaskStatus     ExtractManifest /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SUCCESS 0.0
 INFO:root:DidFailTaskStatus     FlowDroid       /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    FAILED  81.4125051498
 ```
+The columns are tab separated.  The schema is: 
+```
+<Row Descriptor>\t<Tool Name>\t<Target APK>\t<Execution Result (SUCCESS|SKIPPED|FAILED)>\t<Runtime>
+```
 This information can easily be extracted to compute statistics for a given run.
 
 #### Configuration
