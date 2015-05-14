@@ -51,7 +51,7 @@ A virtual machine image was created for running DidFail phase 1. The id of this 
 cd ~/pythonrunner/phase1/didfail_aws
 ~/pythonrunner/phase1/didfail_aws$ python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
 ```
-Some sample APKs are included in `~/apk_samples`.  For large runs, output should be written to ephemeral storage, as the root volume on these VMs is very small.
+Some sample APKs are included in `~/apk_samples`.  For large runs, ensure the directory you are writing to has enough space to hold the output.  The root volumes on these VMs often are too small for the task. 
 
 ## Phase 2
 Phase 2 involves correlating the output from Phase 1 to construct tainted flows between applications.  This repository currently only has code for automating phase 1. 
