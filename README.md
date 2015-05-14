@@ -21,10 +21,26 @@ apkI: A path to an APK file.
 The structure of the output directory is as follows:
 ```
 outdir
-|------
-|------
-|------
+|------dare
+       |------Output from Dare for all APKS 
+|------epicc
+       |------Output from epicc for all APKS
+|------flowdroid
+       |------Output from flowdroid for all APKS
+|------log
+       |------Log files for all tools
+|------transform
+       |------Output from the APK transformer for all APKS
 ```
+The output of this script can be controlled via the `log_level` variable in the configuration, described below.  Summary information about each command executed is outputted by default, in this format.
+```
+INFO:root:DidFailTaskStatus     APKTransformer  /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SUCCESS 61.2379238605
+INFO:root:DidFailTaskStatus     Dare    /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SKIPPED 0.0
+INFO:root:DidFailTaskStatus     Epicc   /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SKIPPED 0.0
+INFO:root:DidFailTaskStatus     ExtractManifest /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    SUCCESS 0.0
+INFO:root:DidFailTaskStatus     FlowDroid       /home/ubuntu/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk    FAILED  81.4125051498
+```
+This information can easily be extracted to compute statistics for a given run.
 
 #### Configuration
 Very granular configuration of the phase 1 is facilitated by editing `phase1_config.py`.  This file is used by `phase1.py` to locate the various binaries required for phase 1 analysis; for example, FlowDroid, Epicc, Soot, etc.
@@ -32,8 +48,8 @@ Very granular configuration of the phase 1 is facilitated by editing `phase1_con
 #### Running on AWS
 A virtual machine image was created for running DidFail phase 1. The id of this image is: `ami-b2b6a5da`.  After launching an instance from this image, you can run phase 1 as follows:
 ```
-ubuntu@ip-172-30-0-167:~$ cd ~/pythonrunner/phase1/didfail_aws
-ubuntu@ip-172-30-0-167:~/pythonrunner/phase1/didfail_aws$ python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
+cd ~/pythonrunner/phase1/didfail_aws
+~/pythonrunner/phase1/didfail_aws$ python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
 ```
 Some sample APKs are included in `~/apk_samples`.  
 
