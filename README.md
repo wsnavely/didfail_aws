@@ -50,7 +50,7 @@ This information can easily be extracted to compute statistics for a given run.
 Very granular configuration of the phase 1 is facilitated by editing `phase1_config.py`.  This file is used by `phase1.py` to locate the various binaries required for phase 1 analysis; for example, FlowDroid, Epicc, Soot, etc.
 
 #### Running on AWS
-A virtual machine image was created for running DidFail phase 1. The id of this image is: `ami-b2b6a5da`.  After launching an instance from this image, you can run phase 1 as follows:
+A virtual machine image was created for running DidFail phase 1. The id of this image is: `ami-b2b6a5da`.  You can login to the VM with an SSH key, and the username ubuntu.  After launching an instance from this image, you can run phase 1 as follows:
 ```
 cd ~/pythonrunner/phase1/didfail_aws
 python phase1.py output ~/apk_samples/BOOKS_AND_REFERENCE/joansoft.dailybible.apk
